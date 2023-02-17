@@ -1,14 +1,14 @@
-## Urban Productive Ecosystem | Transforming raw csv files from HOBO loggers
+# Urban Productive Ecosystem | Transforming raw csv files from HOBO loggers
 
 Github repository for the automatic process of transforming raw csv files from 
 HOBO loggers into a new csv files that can be use to be saved on UPE/MfN urban 
 garden project's GoogleDrive
 
-### Prerequisites
+## Prerequisites
 
 R software and R Studio installed in your computer
 
-### Installation
+## Installation
 
 1. Clone or download (as zip) this repo
 2. Navigate to the project folder 
@@ -36,4 +36,4 @@ R software and R Studio installed in your computer
 4. Run the codes then check `transformed_csv/multiple` folder to see the results 
 
 ## Example
-Check out `example` folder for more details
+Check out [example](https://github.com/enguy-hub/HOBOLoggers_transformCSV/tree/main/example) folder for more details
