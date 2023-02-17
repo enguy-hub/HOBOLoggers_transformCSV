@@ -19,7 +19,7 @@ R software and R Studio installed in your computer
 6. Run all the code in the `packagesInstaller.R` file (`Ctrl + Enter` each line)
 7. Wait until all packages are installed and loaded
 
-## Working with only one single raw HOBO csv file
+## Working with single raw HOBO csv file
 
 1. Place your single raw HOBO csv file into the `raw_csv/single` folder 
 2. Navigate to the `./scripts` folder and open the `transformCSV.R` file
