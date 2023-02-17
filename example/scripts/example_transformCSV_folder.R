@@ -20,8 +20,9 @@ csv_dframes <- lapply(csv_fnames_ext_list, function(x) {
     col_names=c('index', 'DateTime', 'Temp_Celsius', 'Intensity_Lux'))
   
   csv_dframe <- csv_file %>%
-    mutate(DateTime = parse_date_time(DateTime, "%m/%d/%y %I:%M:%S %p")) %>%
-    separate(DateTime, c("Date", "Time"), sep = " ") %>%
+    mutate(DateTime = parse_date_time(DateTime, "%m.%d.%y %I:%M:%S %p")) %>%
+    separate(DateTime, c("Date", "Time"), sep=" ") %>%
+    mutate(Date = as.Date(Date, format='%Y-%m-%d')) %>%
     select(-index)
 })
 

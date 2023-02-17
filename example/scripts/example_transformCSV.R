@@ -21,8 +21,9 @@ csv_file <- read_delim(
 
 # Create newly processed dataframes
 csv_dframe <- csv_file %>%
-  mutate(DateTime = parse_date_time(DateTime, "%m/%d/%y %I:%M:%S %p")) %>%
-  separate(DateTime, c("Date", "Time"), sep = " ") %>%
+  mutate(DateTime = parse_date_time(DateTime, "%m.%d.%y %I:%M:%S %p")) %>%
+  separate(DateTime, c("Date", "Time"), sep=" ") %>%
+  mutate(Date = as.Date(Date, format='%Y-%m-%d')) %>%
   select(-index)
 
 

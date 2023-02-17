@@ -1,5 +1,5 @@
 # Set paths to project dir and file paths
-pdir = "C:/Users/Desktop/Hobologger_transformCSV"
+pdir = "C:/Garden/MyGithub/HOBOLoggers_transformCSV"
 setwd(pdir)
 
 
@@ -20,15 +20,16 @@ csv_dframes <- lapply(csv_fnames_ext_list, function(x) {
     col_names=c('index', 'DateTime', 'Temp_Celsius', 'Intensity_Lux'))
   
   csv_dframe <- csv_file %>%
-    mutate(DateTime = parse_date_time(DateTime, "%m/%d/%y %I:%M:%S %p")) %>%
-    separate(DateTime, c("Date", "Time"), sep = " ") %>%
+    mutate(DateTime = parse_date_time(DateTime, "%m.%d.%y %I:%M:%S %p")) %>%
+    separate(DateTime, c("Date", "Time"), sep=" ") %>%
+    mutate(Date = as.Date(Date, format='%Y-%m-%d')) %>%
     select(-index)
 })
 
 
 # Creating name objects for exporting
 csv_fnames_only <- tools::file_path_sans_ext(csv_fnames_ext_list)
-csv_fnames_export = "./transformed_csv/multiple/"
+csv_fnames_export = "./transformed_csv/multiple"
 csv_export_fnames = paste0(csv_fnames_only, "_transformed.csv", sep="")
 
 
