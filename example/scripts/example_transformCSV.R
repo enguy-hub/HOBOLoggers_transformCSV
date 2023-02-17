@@ -9,7 +9,7 @@ lapply(list_packages, library, character.only = TRUE)
 
 
 # Set paths for the data
-csv_folder = "./raw_csv/single/"
+csv_folder = "./example/raw_csv/single/"
 csv_fname_ext = list.files(csv_folder, ".csv") # Should be only 1 file
 
 
@@ -28,7 +28,7 @@ csv_dframe <- csv_file %>%
 
 # Create name objects for exporting
 csv_fname_only <- tools::file_path_sans_ext(csv_fname_ext)
-csv_fname_export = paste0("./transformed_csv/single/", csv_fname_only, 
+csv_fname_export = paste0("./example/transformed_csv/single/", csv_fname_only, 
                           "_transformed.csv", sep="")
 
 

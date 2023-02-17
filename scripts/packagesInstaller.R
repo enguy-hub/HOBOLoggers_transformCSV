@@ -1,5 +1,5 @@
 # Set paths to your project dir
-pdir = "C:/Users/hienn/OneDrive - TUM/Desktop/Hobologger_transformCSV"
+pdir = "C:/Users/Desktop/Hobologger_transformCSV"
 setwd(pdir)
 
 # Prerequisites - installing packages and load libraries
